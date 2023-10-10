@@ -51,6 +51,7 @@ img {
   display: flex;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -68,14 +69,16 @@ img {
 }
 
 .header-menu-item {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+.header-menu-item.current {
+  position: relative;
+}
 
-.header-menu-item.current::after {
+.current::after {
   content: "";
   position: absolut;
   width: 48px;
@@ -85,7 +88,6 @@ img {
   background: var(--OCEAN, #404BBF);
   left: 0;
   bottom: -1px;
-  display: block;
 }
 
 
@@ -174,6 +176,7 @@ img {
   padding-top: 188px;
   padding-bottom: 188px;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
 .button-container {
